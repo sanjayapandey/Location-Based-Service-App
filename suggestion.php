@@ -25,16 +25,24 @@ function initMap() {
   });
 
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      map.setCenter(pos);
-      getNearbyPlaces(pos, map);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
+	  pos = {
+		        lat: 47.9251237,
+		        lng: -97.08498929999999
+		      };
+		      console.log(pos);
+		      map.setCenter(pos);
+		      getNearbyPlaces(pos, map);
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//       pos = {
+//         lat: position.coords.latitude,
+//         lng: position.coords.longitude
+//       };
+//       console.log(pos);
+//       map.setCenter(pos);
+//       getNearbyPlaces(pos, map);
+//     }, function() {
+//       handleLocationError(true, infoWindow, map.getCenter());
+//     });
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
