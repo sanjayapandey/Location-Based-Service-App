@@ -5,15 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>LSB System</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="css/bootstrap.min.css">  
-  <link rel="stylesheet" href="css/bookstore.css">
-  <link rel="stylesheet" href="css/my-css.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <link rel="stylesheet" href="css/skins/_all-skins.min.css">
-  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOQs5udhpyHrk6D6abirIpYTQFlOCQqNQ&libraries=places&callback=initMap"></script>
 <script>
@@ -119,17 +110,7 @@ function processResults(results, status) {
           placesList.innerHTML += content;
         //onlick event listener for view detail of place
       	$('.place-description').on('click',function(){
-          	console.log(this.id);
-      		showPlace(this.id);
-      		 // Create and send the request to obtain details for a specific place,
-	      	  // using its Place ID.
-// 	      	 $("#place-detail").html('<div class="panel-group"> <div class="panel panel-default"> '
-// 	    	      	 +'<div class="panel-heading">'+this.id+'</div>'
-// 	    	      	 +'<div class="panel-body"> body goes here</div>'
-// 				    +'</div>');
-
-
-			  
+      		showPlace(this.id);		  
       	});
           bounds.extend(place.geometry.location);
         }
@@ -178,32 +159,6 @@ $(document).ready(function(){
 
 })
 </script>
-<style>
-.btn-circle {
-  width: 49px;
-  height: 49px;
-  text-align: center;
-  padding: 5px 0;
-  font-size: 20px;
-  line-height: 2.00;
-  border-radius: 30px;
-}
-li{
-list-style:none;
-}
-.place-description{
-	background-color: #d5e3e5;
-    font-size: 15px;
-    margin: 5px 0px;
-    font-family: fantasy;
-}
-#places{
-    border-right: 1px solid gray;
-    background: white;
-    height: 400px;
-    overflow-y: scroll;
-}
-</style>
 </head>
 <body>
 <div id="wrapper">
